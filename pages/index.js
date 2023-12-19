@@ -15,6 +15,7 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Cole!</a>
           This is a new line.
+          Another line.
         </h1>
 
         <p className={styles.description}>
