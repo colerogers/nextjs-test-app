@@ -1,8 +1,31 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { useState, useEffect } from 'react'
 
 export default function Home() {
+
+  const [data, setData] = useState(null)
+  const [city, setCity] = useState(null)
+  // const [isLoading, setLoading] = useState(true)
+  
+  useEffect(() => {
+    fetch('/api/hello')
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data)
+        // setLoading(false)
+      })
+    fetch('/api/city')
+      .then((res) => res.json())
+      .then((city) => {
+        setCity(city)
+      })
+  }, [])
+ 
+  // if (isLoading) return <p>Loading...</p>
+  // if (!data) return <p>No profile data</p>
+
   return (
     <div className={styles.container}>
       <Head>
@@ -13,14 +36,25 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Cole!</a>
-          This is a new line.
-          Another line.
+          Welcome to <a href="https://nextjs.org">Cole's site!</a>
         </h1>
 
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
+          Fetching from the API:
+        </p>
+
+        <p className={styles.description}>
+          Fetching from the API:
+        </p>
+
+        <p className={styles.description}>
+          My name is {data === null ? "loading" : data.name}
+        </p>
+
+        <p className={styles.description}>
+        My city is {city === null ? "loading" : city.city}
         </p>
 
         <div className={styles.grid}>
