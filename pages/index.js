@@ -7,24 +7,21 @@ export default function Home() {
 
   const [data, setData] = useState(null)
   const [city, setCity] = useState(null)
-  // const [isLoading, setLoading] = useState(true)
   
   useEffect(() => {
     fetch('/api/hello')
       .then((res) => res.json())
       .then((data) => {
         setData(data)
-        // setLoading(false)
       })
+  }, [])
+  useEffect(() => {
     fetch('/api/city')
       .then((res) => res.json())
       .then((city) => {
         setCity(city)
       })
   }, [])
- 
-  // if (isLoading) return <p>Loading...</p>
-  // if (!data) return <p>No profile data</p>
 
   return (
     <div className={styles.container}>
@@ -36,7 +33,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Cole's site!</a>
+          Welcome to <a href="https://nextjs.org">Coles site!</a>
         </h1>
 
         <p className={styles.description}>
@@ -54,10 +51,10 @@ export default function Home() {
         </p>
 
         <p className={styles.description}>
-        My city is {city === null ? "loading" : city.city}
+          My city is {city === null ? "loading" : city.city}
         </p>
 
-        <div className={styles.grid}>
+        {/* <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
@@ -85,7 +82,7 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </div> */}
       </main>
 
       <footer className={styles.footer}>
