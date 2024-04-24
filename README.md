@@ -28,6 +28,12 @@ git commit -m "..."
 git push
 ```
 
+## Backend
+
+```bash
+firebase apphosting:backends:list
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
