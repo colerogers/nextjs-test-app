@@ -44,13 +44,7 @@ export default function Home() {
 
         <p className={styles.description}>
           Fetching from the API:
-        </p>
-
-        <p className={styles.description}>
           My name is {data === null ? "loading" : data.name}
-        </p>
-
-        <p className={styles.description}>
           My city is {city === null ? "loading" : city.city}
         </p>
 
