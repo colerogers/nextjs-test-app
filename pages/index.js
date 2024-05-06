@@ -43,9 +43,11 @@ export default function Home() {
         </p>
 
         <p className={styles.description}>
-          Fetching from the API:\n
-          My name is {data === null ? "loading" : data.name}\n
-          My city is {city === null ? "loading" : city.city}\n
+          Fetching from the API:
+
+          <h2>My name is {data === null ? "loading" : data.name}</h2>
+
+          <h2>My city is {city === null ? "loading" : city.city}</h2>
         </p>
 
         {/* <div className={styles.grid}>
