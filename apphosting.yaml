@@ -8,18 +8,18 @@ runConfig:
   # memoryMiB: 512
 
   # Environment variables and secrets.
-env:
-  #Configure environment variables.
-  #See https://firebase.google.com/docs/app-hosting/configure#user-defined-environment
-  - variable: MESSAGE
-    value: Hello world!
-    availability:
-      - BUILD
-      - RUNTIME
+# env:
+#   #Configure environment variables.
+#   #See https://firebase.google.com/docs/app-hosting/configure#user-defined-environment
+#   - variable: MESSAGE
+#     value: Hello world!
+#     availability:
+#       - BUILD
+#       - RUNTIME
 
-  #Grant access to secrets in Cloud Secret Manager.
-  #See https://firebase.google.com/docs/app-hosting/configure#secret-parameters
-  # - variable: MY_SECRET
-  #   secret: projects/978099673755/secrets/MY_SECRET
-  - variable: A_NEW_SECRET
-    secret: aNewSecret
+#   #Grant access to secrets in Cloud Secret Manager.
+#   #See https://firebase.google.com/docs/app-hosting/configure#secret-parameters
+#   # - variable: MY_SECRET
+#   #   secret: projects/978099673755/secrets/MY_SECRET
+#   - variable: A_NEW_SECRET
+#     secret: aNewSecret
