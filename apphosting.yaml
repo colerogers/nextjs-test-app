@@ -3,7 +3,7 @@
 runConfig:
   minInstances: 1
   vpcAccess:
-    egress: PRIVATE_RANGES_ONLY # Default value
+    egress: ALL_TRAFFIC
     networkInterfaces:
       # Specify at least one of network and/or subnetwork
       - network: private-net
