@@ -7,7 +7,8 @@ runConfig:
     networkInterfaces:
       # Specify at least one of network and/or subnetwork
       - network: private-net
-        connector: connector1
+        subnetwork: aet-uscentral1-connector1-sbnt
+        # connector: connector1
   # maxInstances: 100
   # concurrency: 80
   # cpu: 1
