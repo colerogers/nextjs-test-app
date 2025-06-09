@@ -7,7 +7,6 @@ runConfig:
     networkInterfaces:
       # Specify at least one of network and/or subnetwork
       - network: private-net
-        subnetwork: private-net-subnet
         connector: connector1
   # maxInstances: 100
   # concurrency: 80
