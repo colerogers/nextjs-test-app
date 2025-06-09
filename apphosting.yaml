@@ -6,8 +6,8 @@ runConfig:
     egress: ALL_TRAFFIC
     networkInterfaces:
       # Specify at least one of network and/or subnetwork
-      - network: private-net
-        subnetwork: aet-uscentral1-connector1-sbnt
+      - network: vpcnetwork
+        # subnetwork: aet-uscentral1-connector1-sbnt
         # connector: connector1
   # maxInstances: 100
   # concurrency: 80
