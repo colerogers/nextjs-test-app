@@ -2,13 +2,11 @@
 # See https://firebase.google.com/docs/app-hosting/configure#cloud-run
 runConfig:
   minInstances: 1
-  vpcAccess:
-    egress: ALL_TRAFFIC
-    networkInterfaces:
-      # Specify at least one of network and/or subnetwork
-      - network: vpcnetwork
-        # subnetwork: aet-uscentral1-connector1-sbnt
-        # connector: connector1
+  # vpcAccess:
+  #   egress: ALL
+  #   networkInterfaces:
+  #     # Specify at least one of network and/or subnetwork
+  #     - network: vpcnetwork
   # maxInstances: 100
   # concurrency: 80
   # cpu: 1
